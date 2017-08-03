@@ -33,7 +33,25 @@ ini_set('display_errors', 1);
 
     <?php wp_head(); ?>
 
-    <link href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/css/mws.css" rel="stylesheet">
+    <!-- Required Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/css/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/css/style.css" media="screen">
+
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/css/mws-style.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/css/icol16.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/css/icol32.css" media="screen">
+
+    <!-- Demo Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/css/demo.css" media="screen">
+
+    <!-- jQuery-UI Stylesheet -->
+    <!--<link rel="stylesheet" type="text/css" href="<?php /*echo esc_url( get_stylesheet_directory_uri() ); */?>/css/jquery.ui.all.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="<?php /*echo esc_url( get_stylesheet_directory_uri() ); */?>/css/jquery-ui.custom.css" media="screen">-->
+
+    <!-- Theme Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/css/mws-theme.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/css/themer.css" media="screen">
+
     <link href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/css/main.css" rel="stylesheet">
 </head>
 

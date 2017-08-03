@@ -31,7 +31,7 @@
 .step-taber__head__item a:before{
     width:33px;
     height:17px;
-    background:url(../img/sprite.png) no-repeat 0 -18px;
+    /*background:url(../img/sprite.png) no-repeat 0 -18px;*/
     position:absolute;
     left:50%;
     margin-left:-16px;
@@ -94,6 +94,7 @@ ul.step-taber__head__list
     top:0;
     margin-left:-19px;
     content:'';
+    box-sizing: content-box;
 }
 .step-taber__head__item .circle:before{
     content:'';
