@@ -250,6 +250,13 @@ ul.step-taber__head__list
     width: 150px;
     background-color: #d02c21 !important;
     float: left;
+    overflow: hidden;
+    text-align: center;
+}
+
+.klever-panel img {
+    max-height: 200px;
+    max-width: 150px;
 }
 
 .klever-panel-last {

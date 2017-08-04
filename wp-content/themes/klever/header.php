@@ -138,8 +138,12 @@ ini_set('display_errors', 1);
                 </div>
 
                 <div class="klever-header-container">
-                    <div class="klever-panel"></div>
-                    <div class="klever-panel"></div>
+                    <div class="klever-panel widget-area">
+                        <?php dynamic_sidebar('klever-top-image-1'); ?>
+                    </div>
+                    <div class="klever-panel widget-area">
+                        <?php dynamic_sidebar('klever-top-image-2'); ?>
+                    </div>
                     <div class="klever-panel-last"></div>
                 </div>
             </div>
