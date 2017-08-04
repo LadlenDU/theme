@@ -200,3 +200,42 @@ ul.step-taber__head__list
     font-size:12px;
     margin-top:20px;
 }
+
+/* Мои настройки */
+
+.site-header {
+    padding: 0;
+    margin: 0;
+}
+
+/*#mws-header {
+    z-index: 0;
+}*/
+
+.klever-top-menu {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 27px;
+    width: 100%;
+    background-color: red;
+    padding-left: 10px;
+}
+
+/*
+#masthead {
+    margin-top: 3em;
+}*/
+
+.klever-header-container {
+    margin-top: 27px;
+}
+
+.menu-toggle {
+    margin: 0;
+}
+
+.site-header-menu {
+    margin: 0;
+}

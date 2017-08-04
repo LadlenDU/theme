@@ -20,9 +20,9 @@
          *
          * @since Twenty Fifteen 1.0
          */
-        do_action( 'twentyfifteen_credits' );
+        do_action( 'twentysixteen_credits' );
         ?>
-        <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyfifteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfifteen' ), 'WordPress' ); ?></a>
+        <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' ); ?></a>
     </div><!-- .site-info -->
 </footer><!-- .site-footer -->
 
@@ -30,7 +30,7 @@
 
 <?php wp_footer(); ?>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
 </body>
 </html>
