@@ -138,95 +138,9 @@ ini_set('display_errors', 1);
                 </div>
 
                 <div class="klever-header-container">
-                    <!-- Logo Container -->
-                    <div id="mws-logo-container">
-
-                        <!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
-                        <div id="mws-logo-wrap">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo.png"
-                                 alt="mws admin">
-                        </div>
-                    </div>
-
-                    <div class="step-taber__head">
-                        <ul class="step-taber__head__list horizontal">
-                            <li class="step-taber__head__item active">
-
-                                <!--<span class="number">1 шаг</span>-->
-                                <span class="circle"></span>
-                                <span class="title">Регистрация на Klever.Today</span>
-
-                            </li>
-                            <li class="step-taber__head__item current">
-                                <a href="http://klever.today/panel?id=0">
-                                    <!--<span class="number">2 шаг</span>-->
-                                    <span class="circle"></span>
-                                    <span class="title">Старт</span>
-                                </a>
-                            </li>
-                            <li class="step-taber__head__item locked">
-                                <a href="http://klever.today/panel?id=1#brokers">
-                                    <!--<span class="number">4 шаг</span>-->
-                                    <span class="circle"></span>
-                                    <span class="title">Посмотреть первый урок</span>
-                                </a>
-                            </li>
-                            <li class="step-taber__head__item locked">
-                                <a href="#">
-                                    <!--<span class="number">5 шаг</span>-->
-                                    <span class="circle"></span>
-                                    <span class="title">Получить доступ к основной части</span>
-                                </a>
-                            </li>
-                            <li class="step-taber__head__item locked">
-                                <a href="skype:?chat&amp;blob=jRF_25qlI44vV-mvcNGxG65h76S6ATGJZmxy8ZWMS6h_u7jHSOrEk0eS7NdbXt9LYxxWyZxHV56K9XXuFOo8daOIR6kpP_XhtTOPUGxEsx9t-0z0gAF4lhQdk7eKV6QwGwMXZ-GHGyOdh15qnp2wTR0QY1vAvcxv9EoCTHxl7VBP_eJ2QFLIFQuRrxxirOk7JqdX">
-                                    <!--<span class="number">3 шаг</span>-->
-                                    <span class="circle"></span>
-                                    <span class="title">Получить доступ к сигналам</span>
-                                </a>
-                            </li>
-                            <li class="step-taber__head__item locked">
-                                <a href="skype:?chat&amp;blob=jRF_25qlI44vV-mvcNGxG65h76S6ATGJZmxy8ZWMS6h_u7jHSOrEk0eS7NdbXt9LYxxWyZxHV56K9XXuFOo8daOIR6kpP_XhtTOPUGxEsx9t-0z0gAF4lhQdk7eKV6QwGwMXZ-GHGyOdh15qnp2wTR0QY1vAvcxv9EoCTHxl7VBP_eJ2QFLIFQuRrxxirOk7JqdX">
-                                    <!--<span class="number">3 шаг</span>-->
-                                    <span class="circle"></span>
-                                    <span class="title">Пройти обучение</span>
-                                </a>
-                            </li>
-                            <li id="end" class="step-taber__head__item">
-                                <a href="#">
-                                    <!--<span class="number">6 шаг</span>-->
-                                    <span class="circle"></span>
-                                    <span class="title">+1778$ в месяц = 73% успеха</span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-
-                    <!-- User Tools (notifications, logout, profile, change password) -->
-                    <div id="mws-user-tools" class="clearfix">
-
-                        <!-- User Information and functions section -->
-                        <div style="visibility:hidden;" id="mws-user-info" class="mws-inset">
-
-                            <!-- User Photo -->
-                            <div id="mws-user" style="width:30px; float:left;">
-                            </div>
-
-                            <!-- Username and Functions -->
-                            <div id="mws-user-functions">
-                                <div id="mws-username">
-                                </div>
-                                <div id="cash" style="color:#00A1A5; cursor:pointer;">
-                                    <!--Ваш баланс: 40$ -->
-                                </div>
-                                <ul>
-                                    <li><a href="http://klever.today/panel/profile">Профиль</a></li>
-                                    <li><a href="http://klever.today/panel/exit">Выход</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="klever-panel"></div>
+                    <div class="klever-panel"></div>
+                    <div class="klever-panel-last"></div>
                 </div>
             </div>
 
