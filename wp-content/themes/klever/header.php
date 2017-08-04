@@ -32,27 +32,24 @@ ini_set('display_errors', 1);
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
     <![endif]-->
 
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
 
     <?php wp_head(); ?>
 
     <!-- Required Stylesheets -->
     <link rel="stylesheet" type="text/css"
-          href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/stylesheet.css" media="screen">
+          href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/style.css"
           media="screen">
 
     <link rel="stylesheet" type="text/css"
-          href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/mws-style.min.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/icol16.css"
-          media="screen">
-    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/icol32.css"
-          media="screen">
+          href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/mws-style.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/icol16.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/icol32.css">
 
     <!-- Demo Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/demo.css"
-          media="screen">
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/demo.css">
 
     <!-- jQuery-UI Stylesheet -->
     <!--<link rel="stylesheet" type="text/css" href="<?php /*echo esc_url( get_stylesheet_directory_uri() ); */ ?>/css/jquery.ui.all.css" media="screen">
@@ -60,9 +57,8 @@ ini_set('display_errors', 1);
 
     <!-- Theme Stylesheet -->
     <link rel="stylesheet" type="text/css"
-          href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/mws-theme.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/themer.css"
-          media="screen">
+          href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/mws-theme.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/themer.css">
 
     <link href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/main.css" rel="stylesheet">
 </head>
@@ -150,5 +146,9 @@ ini_set('display_errors', 1);
 
         </div>
     </header>
+
+    <div id="mws-sidebar" class="klever-left-menu widget-area">
+        <?php dynamic_sidebar('klever-left-menu'); ?>
+    </div>
 
     <div id="content" class="site-content">

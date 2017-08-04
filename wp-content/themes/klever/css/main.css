@@ -251,7 +251,7 @@ ul.step-taber__head__list
 
 .klever-panel {
     height: 200px;
-    width: 150px;
+    width: 300px;
     background-color: #d02c21 !important;
     float: left;
     overflow: hidden;
@@ -265,8 +265,19 @@ ul.step-taber__head__list
 
 .klever-panel-last {
     height: 200px;
-    margin-left: 300px;
+    margin-left: 600px;
     /*width: 100%;*/
     background-color: green !important;
     /*float: left;*/
+}
+
+.klever-left-menu {
+    min-width: 200px;
+}
+
+#mws-navigation > div > ul > li > a, #mws-navigation > div > ul > li > span {
+    overflow: hidden;
+    padding-right: 10px;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size: 13px;
 }

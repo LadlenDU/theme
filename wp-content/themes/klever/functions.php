@@ -53,6 +53,15 @@ function klever_widgets_init()
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
+    register_sidebar(array(
+        'name' => __('Левое меню', 'klever'),
+        'id' => 'klever-left-menu',
+        'description' => __('Левое меню.', 'klever'),
+        'before_widget' => '<div id="mws-navigation" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
 }
 
 add_action('widgets_init', 'klever_widgets_init');
