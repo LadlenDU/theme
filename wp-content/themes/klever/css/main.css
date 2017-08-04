@@ -223,6 +223,10 @@ ul.step-taber__head__list
     padding-left: 10px;
 }
 
+.klever-top-menu img {
+    max-height: 27px;
+}
+
 /*
 #masthead {
     margin-top: 3em;
