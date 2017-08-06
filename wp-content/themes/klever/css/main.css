@@ -281,3 +281,7 @@ ul.step-taber__head__list
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     font-size: 13px;
 }
+
+#site-navigation {
+    width: 100%;
+}
