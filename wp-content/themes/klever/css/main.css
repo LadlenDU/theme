@@ -229,6 +229,7 @@ ul.step-taber__head__list {
 
 #mws-header {
     width: 100%;
+    background-color: #35353a;
 }
 
 .klever-top-menu {
@@ -238,7 +239,7 @@ ul.step-taber__head__list {
     left: 0;
     height: 27px;*/
     width: 100%;
-    background-color: red;
+    /*background-color: red;*/
     padding-left: 10px;
 }
 
@@ -270,8 +271,8 @@ ul.step-taber__head__list {
 
 .klever-panel {
     height: 200px;
-    width: 300px;
-    background-color: #d02c21 !important;
+    width: 500px;
+    /*background-color: #d02c21 !important;*/
     float: left;
     overflow: hidden;
     text-align: center;
@@ -284,7 +285,7 @@ ul.step-taber__head__list {
 
 .klever-panel-last {
     height: 200px;
-    margin-left: 600px;
+    margin-left: 1000px;
     /*width: 100%;*/
     background-color: green !important;
     /*float: left;*/
@@ -297,16 +298,29 @@ ul.step-taber__head__list {
 #mws-navigation > div > ul > li > a, #mws-navigation > div > ul > li > span {
     overflow: hidden;
     padding-right: 10px;
+    padding-left: 10px;
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     font-size: 13px;
 }
 
 #site-navigation {
     width: 100%;
+    font-size: 13px;
+    color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+#site-navigation li {
+    border-right: 1px solid rgba(0, 0, 0, 0.35);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#site-navigation li:last-child::content {
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 #content {
-    margin-left: 200px;
+    margin: 20px 20px 20px 220px;
     padding: 0;
 }
 
@@ -317,15 +331,19 @@ ul.step-taber__head__list {
     padding: 0;
     background-color: #35353a;
     /*border-top: 1px solid rgba(255, 255, 255, 0.15);*/
-    -webkit-box-shadow: 0px -2px 3px 0px rgba(26,26,26,1);
-    -moz-box-shadow: 0px -2px 3px 0px rgba(26,26,26,1);
-    box-shadow: 0px -2px 3px 0px rgba(26,26,26,1);
+    -webkit-box-shadow: 0px -2px 3px 0px rgba(26, 26, 26, 1);
+    -moz-box-shadow: 0px -2px 3px 0px rgba(26, 26, 26, 1);
+    box-shadow: 0px -2px 3px 0px rgba(26, 26, 26, 1);
 }
 
 #colophon .site-info {
     text-align: center;
     margin-right: 0;
     width: 100%;
+}
+
+#colophon .site-info a {
+    color: white;
 }
 
 #main {

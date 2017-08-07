@@ -424,7 +424,8 @@ body {
     outline: 0;
     display: block;
     text-decoration: none;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
+    padding-left: 10px;
     position: relative;
     padding: 11px 48px 11px 0;
     line-height: 20px
@@ -520,7 +521,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+/*@media only screen and (min-width: 600px) and (max-width: 1024px) {
     #mws-sidebar, #mws-sidebar-bg {
         width: 100px
     }
@@ -591,9 +592,9 @@ body {
     #mws-footer {
         left: 106px
     }
-}
+}*/
 
-@media only screen and (max-width: 599px) {
+/*@media only screen and (max-width: 599px) {
     #mws-logo-container {
         float: none;
         display: block;
@@ -769,7 +770,7 @@ body {
     #mws-themer {
         display: none
     }
-}
+}*/
 
 .mws-panel {
     margin-bottom: 32px;
