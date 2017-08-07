@@ -18,7 +18,6 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-
         <?php if ( have_posts() ) : ?>
 
             <?php if ( is_home() && ! is_front_page() ) : ?>
@@ -56,6 +55,13 @@ get_header(); ?>
         ?>
 
     </main><!-- .site-main -->
+
+    <footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="site-info">
+            <a href="<?php echo esc_url( __( 'http://yoursite.org/', 'twentysixteen' ) ); ?>">&copy; Kveler.Inc 2017</a>
+        </div>
+    </footer>
+
 </div><!-- .content-area -->
 
 <?php get_footer(); ?>

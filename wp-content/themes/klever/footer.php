@@ -12,7 +12,7 @@
 
 </div><!-- .site-content -->
 
-<footer id="colophon" class="site-footer" role="contentinfo">
+<!--<footer id="colophon" class="site-footer" role="contentinfo">
     <div class="site-info">
         <?php
         /**
@@ -20,11 +20,11 @@
          *
          * @since Twenty Fifteen 1.0
          */
-        do_action( 'twentysixteen_credits' );
+        //do_action( 'twentysixteen_credits' );
         ?>
         <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' ); ?></a>
-    </div><!-- .site-info -->
-</footer><!-- .site-footer -->
+    </div>
+</footer>--><!-- .site-footer -->
 
 </div><!-- .site -->
 
