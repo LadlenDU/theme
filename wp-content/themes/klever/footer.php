@@ -12,19 +12,11 @@
 
 </div><!-- .site-content -->
 
-<!--<footer id="colophon" class="site-footer" role="contentinfo">
+<footer id="colophon" class="site-footer" role="contentinfo">
     <div class="site-info">
-        <?php
-        /**
-         * Fires before the Twenty Fifteen footer text for footer customization.
-         *
-         * @since Twenty Fifteen 1.0
-         */
-        //do_action( 'twentysixteen_credits' );
-        ?>
-        <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' ); ?></a>
+        <a href="<?php echo esc_url( __( 'http://yoursite.org/', 'twentysixteen' ) ); ?>">&copy; Kveler.Inc 2017</a>
     </div>
-</footer>--><!-- .site-footer -->
+</footer>
 
 </div><!-- .site -->
 

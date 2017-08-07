@@ -56,12 +56,6 @@ get_header(); ?>
 
     </main><!-- .site-main -->
 
-    <footer id="colophon" class="site-footer" role="contentinfo">
-        <div class="site-info">
-            <a href="<?php echo esc_url( __( 'http://yoursite.org/', 'twentysixteen' ) ); ?>">&copy; Kveler.Inc 2017</a>
-        </div>
-    </footer>
-
 </div><!-- .content-area -->
 
 <?php get_footer(); ?>

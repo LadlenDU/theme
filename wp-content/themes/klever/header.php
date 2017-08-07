@@ -64,7 +64,7 @@ ini_set('display_errors', 1);
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
+<div id="page" class="site">
     <!--<a class="skip-link screen-reader-text" href="#content"><?php /*_e( 'Skip to content', 'twentysixteen' ); */ ?></a>
 
     <div id="sidebar" class="sidebar">
@@ -147,6 +147,8 @@ ini_set('display_errors', 1);
         </div>
     </header>
 
+    <div id="mws-sidebar-stitch"></div>
+    <div id="mws-sidebar-bg"></div>
     <div id="mws-sidebar" class="klever-left-menu widget-area">
         <?php dynamic_sidebar('klever-left-menu'); ?>
     </div>

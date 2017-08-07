@@ -312,7 +312,8 @@ ul.step-taber__head__list {
 
 #colophon {
     margin: 0;
-    padding: 10px 0;
+    padding: 0;
+    background-color: #35353a;
 }
 
 #colophon .site-info {
@@ -323,4 +324,12 @@ ul.step-taber__head__list {
 
 #main {
     width: 100%;
+}
+
+body:after {
+    display: none !important;
+}
+
+#page {
+    position: relative;
 }
