@@ -363,3 +363,9 @@ body:after {
 .main-navigation {
     margin: 0;
 }
+
+#klever-top-caption-wrapper {
+    color: #EEE;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+}

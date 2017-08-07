@@ -133,6 +133,11 @@ ini_set('display_errors', 1);
                     <?php endif; ?>
                 </div>
 
+                <?php // Caption  ?>
+                <div class="klever-top-caption widget-area">
+                    <?php dynamic_sidebar('klever-top-caption'); ?>
+                </div>
+
                 <div class="klever-header-container">
                     <div class="klever-panel widget-area">
                         <?php dynamic_sidebar('klever-top-image-1'); ?>
