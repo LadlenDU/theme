@@ -2720,7 +2720,7 @@ p > video {
  */
 
 @media screen and (min-width: 44.375em) {
-    body:not(.custom-background-image):before,
+    /*body:not(.custom-background-image):before,
     body:not(.custom-background-image):after {
         background: inherit;
         content: "";
@@ -2742,7 +2742,7 @@ p > video {
 
     body:not(.custom-background-image):after {
         bottom: 0;
-    }
+    }*/
 
     /*.site {
         margin: 21px;
@@ -2941,11 +2941,11 @@ p > video {
  * 14.2 - >= 783px
  */
 
-@media screen and (min-width: 48.9375em) {
+/*@media screen and (min-width: 48.9375em) {
     body:not(.custom-background-image).admin-bar:before {
         top: 32px;
     }
-}
+}*/
 
 
 /**
