@@ -817,7 +817,7 @@ a:active {
     display: block;
     line-height: 1.3125;
     outline-offset: -1px;
-    padding: 0.84375em 0;
+    padding: 0.84375em 0.875em;
 }
 
 .main-navigation a:hover,
@@ -2994,6 +2994,7 @@ p > video {
         outline-offset: -8px;
         padding: 0.65625em 0.875em;
         white-space: nowrap;
+        /*padding-left: 10px !important;*/
     }
 
     .main-navigation li:hover > a,
@@ -3970,3 +3971,8 @@ p > video {
         padding: 0;
     }
 }
+
+/*body {
+    установим в настройках
+    color: black;
+}*/
