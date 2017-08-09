@@ -1047,7 +1047,7 @@ a:active {
 
 .post-navigation {
     border-top: 4px solid #1a1a1a;
-    border-bottom: 4px solid #1a1a1a;
+    /*border-bottom: 4px solid #1a1a1a;*/
     clear: both;
     font-family: Montserrat, "Helvetica Neue", sans-serif;
     margin: 0 7.6923% 3.5em;
@@ -3527,12 +3527,12 @@ p > video {
         padding-top: 5.25em;
     }*/
 
-    .comments-area,
+    /*.comments-area,
     .sidebar,
     .content-bottom-widgets .widget-area,
     .widecolumn {
         margin-bottom: 7.0em;
-    }
+    }*/
 
     body:not(.search-results) .entry-summary {
         margin-bottom: 2.210526316em;
