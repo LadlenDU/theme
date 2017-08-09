@@ -421,8 +421,8 @@ body,
 .entry-content-wrapper,
 .comments-area,
 #main .not-found,
-#main .page-header,
-#main .status-publish {
+#main .page-header/*,
+#main .status-publish*/ {
     padding: 0 1em;
 }
 
