@@ -387,7 +387,8 @@ body:after {
     position: absolute;
 }
 
-body {
+body,
+.site {
     background-color: #F0F0F0;
 }
 
@@ -399,7 +400,7 @@ body {
     padding-bottom: 1em;
 }
 
-.entry-header {
+#main .page.type-page.status-publish.hentry .entry-header {
     background-color: #35353A;
     color: white;
     text-align: center;
@@ -418,4 +419,13 @@ body {
 
 #primary {
     width: 73% !important;
+}
+
+.menu-item > .sub-menu {
+    display: none;
+}
+
+.menu-item.current-menu-parent > .sub-menu,
+.menu-item.current-menu-item > .sub-menu {
+    display: block;
 }
