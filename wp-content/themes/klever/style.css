@@ -1671,7 +1671,7 @@ blockquote:after,
  */
 
 .site-main > article {
-    margin-bottom: 3.5em;
+    margin-bottom: 1.5em;
     position: relative;
 }
 
@@ -2821,9 +2821,9 @@ p > video {
         display: inline-block;
     }
 
-    .site-main > article {
+    /*.site-main > article {
         margin-bottom: 5.25em;
-    }
+    }*/
 
     .entry-header,
     .post-thumbnail,
@@ -2908,10 +2908,10 @@ p > video {
         padding-left: 1.75em;
     }
 
-    .comment-list + .comment-respond,
+    /*.comment-list + .comment-respond,
     .comment-navigation + .comment-respond {
         padding-top: 3.5em;
-    }
+    }*/
 
     /*.comments-area,
     .widget,
@@ -3433,9 +3433,9 @@ p > video {
         margin-bottom: 4.307692308em;
     }*/
 
-    .site-main > article {
+    /*.site-main > article {
         margin-bottom: 7.0em;
-    }
+    }*/
 
     .entry-title {
         font-size: 40px;
@@ -3521,10 +3521,10 @@ p > video {
         padding-bottom: 0;
     }
 
-    .comment-list + .comment-respond,
+    /*.comment-list + .comment-respond,
     .comment-navigation + .comment-respond {
         padding-top: 5.25em;
-    }
+    }*/
 
     .comments-area,
     .sidebar,

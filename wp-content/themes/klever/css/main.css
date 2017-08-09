@@ -364,6 +364,7 @@ ul.step-taber__head__list {
 
 #main {
     width: 100%;
+    /*padding: 1em;*/
 }
 
 body:after {
@@ -401,7 +402,8 @@ body,
     padding-bottom: 1em;
 }
 
-#main .page.type-page.status-publish.hentry .entry-header {
+/*#main .page.type-page.status-publish.hentry .entry-header {*/
+#main .entry-header {
     background-color: #35353A;
     color: white;
     text-align: center;
@@ -411,9 +413,14 @@ body,
 
 .entry-content,
 .entry-footer {
-    padding: 0 1em;
+    /*padding: 0 1em;*/
     margin-left: 0;
     margin-right: 0;
+}
+
+.entry-content-wrapper,
+.comments-area {
+    padding: 0 1em;
 }
 
 .entry-header h1 {
@@ -440,3 +447,4 @@ body,
 .menu-item.current-menu-item > .sub-menu {
     display: block;
 }
+
