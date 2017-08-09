@@ -275,16 +275,17 @@ ul.step-taber__head__list {
 .klever-panel {
     height: 200px;
     line-height: 200px;
-    width: 500px;
+    /*width: 500px;*/
     /*background-color: #d02c21 !important;*/
     float: left;
     overflow: hidden;
     text-align: center;
+    margin-left: 10px;
 }
 
 .klever-panel img {
-    max-height: 200px;
-    max-width: 150px;
+    max-height: 180px;
+    /*max-width: 150px;*/
 }
 
 .klever-panel-last {
@@ -421,10 +422,13 @@ body,
 .entry-content-wrapper,
 .comments-area,
 #main .not-found,
-#main .page-header,
-#main .navigation/*,
+#main .page-header/*,
 #main .status-publish*/ {
     padding: 0 1em;
+}
+
+#main .navigation {
+    margin: 0 1em;
 }
 
 #main .page-header {
@@ -504,4 +508,8 @@ h2.entry-title a {
 
 .entry-content-excerpt p {
     margin-bottom: 0;
+ }
+
+ .post-thumbnail img {
+     margin-bottom: 1em;
  }
