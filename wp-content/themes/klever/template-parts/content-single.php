@@ -54,5 +54,5 @@
         </footer><!-- .entry-footer -->
 
     </div>
-    
+
 </article><!-- #post-## -->

@@ -2034,9 +2034,10 @@ body:not(.search-results) .entry-summary > :last-child,
 }
 
 .page-header {
-    border-top: 4px solid #1a1a1a;
-    margin: 0 7.6923% 3.5em;
-    padding-top: 1.75em;
+    /*border-top: 4px solid #1a1a1a;*/
+    /*margin: 0 7.6923% 3.5em;*/
+    margin: 0 7.6923% 1.5em;
+    padding-top: 1.5em;
 }
 
 body.error404 .page-header,

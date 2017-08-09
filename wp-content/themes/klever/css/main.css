@@ -419,12 +419,34 @@ body,
 }
 
 .entry-content-wrapper,
-.comments-area {
+.comments-area,
+#main .not-found,
+#main .page-header,
+#main .status-publish {
     padding: 0 1em;
 }
 
-.entry-header h1 {
+#main .page-header {
+    padding-top: 1em;
+}
+
+#main .page.type-page.status-publish.hentry {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#main .not-found {
+    padding: 1em;
+}
+
+.entry-header h1,
+.entry-header h2 {
     margin: 0;
+    color: white;
+}
+
+h2.entry-title a {
+    color: white;
 }
 
 /*
