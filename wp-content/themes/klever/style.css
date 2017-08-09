@@ -3366,13 +3366,13 @@ p > video {
         order: 1;
     }
 
-    .no-sidebar .content-area {
+    /*.no-sidebar .content-area {
         float: none;
         margin: 0;
         width: 100%;
-    }
+    }*/
 
-    .no-sidebar .entry-header,
+    /*.no-sidebar .entry-header,
     .no-sidebar .entry-content,
     .no-sidebar .entry-summary,
     .no-sidebar .entry-footer,
@@ -3390,7 +3390,7 @@ p > video {
     .widecolumn {
         padding-right: 15%;
         padding-left: 15%;
-    }
+    }*/
 }
 
 
