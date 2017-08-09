@@ -537,3 +537,7 @@ h2.entry-title a {
 .entry-content-excerpt p:first-child {
     margin-top: 0;
 }
+
+.entry-content-excerpt .more-link {
+    display: none;
+}

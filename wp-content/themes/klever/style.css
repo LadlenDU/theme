@@ -3534,7 +3534,7 @@ p > video {
         margin-bottom: 7.0em;
     }*/
 
-    body:not(.search-results) .entry-summary {
+    /*body:not(.search-results) .entry-summary {
         margin-bottom: 2.210526316em;
     }
 
@@ -3615,7 +3615,7 @@ p > video {
         margin-right: -100%;
         margin-left: 15%;
         width: 15%;
-    }
+    }*/
 }
 
 

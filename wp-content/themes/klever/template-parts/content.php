@@ -24,14 +24,24 @@
                 <?php twentysixteen_post_thumbnail(); ?>
             </div>
             <div class="entry-content-excerpt">
-                <?php the_excerpt(); ?>
+                <?php
+                    //get_post_();
+                    the_excerpt();
+                    ?>
             </div>
         </div>
 
         <a class="moretag" href="<?php echo get_permalink(get_post()->ID) ?>"><?php echo __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ) ?></a>
 
         <footer class="entry-footer">
-            <?php twentysixteen_entry_meta(); ?>
+            <?php
+                //twentysixteen_entry_meta();
+                if ( ! is_singular() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+                    echo '<span class="comments-link">';
+                    comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) );
+                    echo '</span>';
+                }
+            ?>
 		<?php
             edit_post_link(
             sprintf(
