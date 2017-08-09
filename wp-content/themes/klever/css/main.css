@@ -470,3 +470,25 @@ h2.entry-title a {
     display: block;
 }
 
+.entry-content-thumbnail img {
+    max-width: 350px;
+    max-height: 350px;
+}
+
+.entry-content-wrapper-2 {
+    height: auto;
+    overflow: hidden;
+}
+
+.entry-content-thumbnail {
+    width: 350px;
+    float: left;
+    margin-right: 1em;
+}
+
+.entry-content-excerpt {
+    float: none; /* not needed, just for clarification */
+    /* the next props are meant to keep this block independent from the other floated one */
+    width: auto;
+    overflow: hidden;
+}​​
