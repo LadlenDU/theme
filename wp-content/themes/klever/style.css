@@ -2919,11 +2919,11 @@ p > video {
         margin-bottom: 5.25em;
     }
 
-    .sidebar,
+    /*.sidebar,
     .widecolumn {
         margin-bottom: 5.25em;
         padding-right: 23.0769%;
-    }
+    }*/
 
     body:not(.search-results) .entry-summary li > ul,
     body:not(.search-results) .entry-summary blockquote > ul {
@@ -2947,6 +2947,9 @@ p > video {
     }
 }*/
 
+#primary {
+    width: 100%;
+}
 
 /**
  * 14.3 - >= 910px
@@ -3130,7 +3133,11 @@ p > video {
         width: 25%;
     }
 
-    .widget {
+    #primary {
+        width: 73%;
+    }
+
+    /*.widget {
         font-size: 13px;
         font-size: 0.8125rem;
         line-height: 1.6153846154;
@@ -3291,7 +3298,7 @@ p > video {
     .widget button.search-submit {
         padding: 0;
         width: 35px;
-    }
+    }*/
 
     .tagcloud a {
         margin: 0 0.2307692308em 0.5384615385em 0;
@@ -3615,7 +3622,7 @@ p > video {
  * 14.5 - >= 1200px
  */
 
-@media screen and (min-width: 75em) {
+/*@media screen and (min-width: 75em) {
     body:not(.search-results) .entry-summary {
         font-size: 23px;
         font-size: 1.4375rem;
@@ -3731,14 +3738,14 @@ p > video {
     body:not(.search-results) .entry-summary .aligncenter {
         margin-bottom: 1.5217391304em;
     }
-}
+}*/
 
 
 /**
  * 15.0 - Print
  */
 
-@media print {
+/*@media print {
     form,
     button,
     input,
@@ -3845,7 +3852,7 @@ p > video {
 
     body,
     .site {
-        background: none !important; /* Brute force since user agents all print differently. */
+        background: none !important; !* Brute force since user agents all print differently. *!
     }
 
     body,
@@ -3854,13 +3861,13 @@ p > video {
     .site-branding .site-title a,
     .entry-title a,
     .comment-author {
-        color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
+        color: #1a1a1a !important; !* Make sure color schemes don't affect to print *!
     }
 
     blockquote,
     .page-header,
     .comments-title {
-        border-color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
+        border-color: #1a1a1a !important; !* Make sure color schemes don't affect to print *!
     }
 
     blockquote,
@@ -3881,12 +3888,12 @@ p > video {
     .site-info a,
     .wp-caption .wp-caption-text,
     .gallery-caption {
-        color: #686868 !important; /* Make sure color schemes don't affect to print */
+        color: #686868 !important; !* Make sure color schemes don't affect to print *!
     }
 
     code,
     hr {
-        background-color: #d1d1d1 !important; /* Make sure color schemes don't affect to print */
+        background-color: #d1d1d1 !important; !* Make sure color schemes don't affect to print *!
     }
 
     pre,
@@ -3900,11 +3907,11 @@ p > video {
     .comment-list .pingback,
     .comment-list .trackback,
     .no-comments {
-        border-color: #d1d1d1 !important; /* Make sure color schemes don't affect to print */
+        border-color: #d1d1d1 !important; !* Make sure color schemes don't affect to print *!
     }
 
     a {
-        color: #007acc !important; /* Make sure color schemes don't affect to print */
+        color: #007acc !important; !* Make sure color schemes don't affect to print *!
     }
 
     .entry-content a,
@@ -3913,7 +3920,7 @@ p > video {
     .comment-content a,
     .pingback .comment-body > a {
         box-shadow: none;
-        border-bottom: 1px solid #007acc !important; /* Make sure color schemes don't affect to print */
+        border-bottom: 1px solid #007acc !important; !* Make sure color schemes don't affect to print *!
     }
 
     .site {
@@ -3970,7 +3977,7 @@ p > video {
     .widecolumn {
         padding: 0;
     }
-}
+}*/
 
 /*body {
     установим в настройках

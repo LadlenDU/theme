@@ -355,6 +355,7 @@ ul.step-taber__head__list {
     text-align: center;
     margin-right: 0;
     width: 100%;
+    /*padding: 5px;*/
 }
 
 #colophon .site-info a {
@@ -410,16 +411,26 @@ body,
 
 .entry-content,
 .entry-footer {
-     padding: 0 1em;
+    padding: 0 1em;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .entry-header h1 {
     margin: 0;
 }
 
+/*
 #primary {
-    width: 73% !important;
+    width: 73%;
 }
+*/
+
+/*@media screen and (min-width: 30em) {
+    #primary {
+        width: 100%;
+    }
+}*/
 
 .menu-item > .sub-menu {
     display: none;
