@@ -386,3 +386,36 @@ body:after {
 #mws-sidebar {
     position: absolute;
 }
+
+body {
+    background-color: #F0F0F0;
+}
+
+#main {
+    /*float: left;*/
+    background-color: #FAFAFA;
+    border: solid 1px #999;
+    width: 100%;
+    padding-bottom: 1em;
+}
+
+.entry-header {
+    background-color: #35353A;
+    color: white;
+    text-align: center;
+    padding: 5px 0 10px;
+    margin: 0 0 2em;
+}
+
+.entry-content,
+.entry-footer {
+     padding: 0 1em;
+}
+
+.entry-header h1 {
+    margin: 0;
+}
+
+#primary {
+    width: 73% !important;
+}
