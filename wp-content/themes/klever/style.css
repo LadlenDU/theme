@@ -315,9 +315,9 @@ h6 {
     text-rendering: optimizeLegibility;
 }
 
-p {
+/*p {
     margin: 0 0 1.75em;
-}
+}*/
 
 dfn,
 cite,
@@ -3461,7 +3461,7 @@ p > video {
     }
 
     .post-thumbnail {
-        margin-bottom: 2.625em;
+        margin-bottom: 0;
     }
 
     .entry-content h1,

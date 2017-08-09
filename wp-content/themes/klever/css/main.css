@@ -440,6 +440,14 @@ body,
     padding: 1em;
 }
 
+#main .moretag {
+    display: block;
+    padding: 0.7em 1em;
+    margin: 1em 0;
+    text-align: left;
+    background-color: #F0F0F0;
+}
+
 .entry-header h1,
 .entry-header h2 {
     margin: 0;
@@ -493,3 +501,7 @@ h2.entry-title a {
     width: auto;
     overflow: hidden;
 }​​
+
+.entry-content-excerpt p {
+    margin-bottom: 0;
+ }
