@@ -61,6 +61,15 @@ ini_set('display_errors', 1);
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/themer.css">
 
     <link href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/main.css" rel="stylesheet">
+
+    <style type="text/css">
+        .registration-form input.name {
+            background-position: 4% 50%;
+            background-repeat: no-repeat;
+            background-image: url(<?php bloginfo('stylesheet_directory') ?>/img/envelope.png);
+        }
+    </style>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -145,19 +154,61 @@ ini_set('display_errors', 1);
                     <div class="klever-panel widget-area">
                         <?php dynamic_sidebar('klever-top-image-2'); ?>
                     </div>
-                    <div class="klever-panel-last"></div>
+                    <div class="klever-panel-last">
+                        <div class="registration-form">
+                            <form method="post" class="registration-form-form">
+                                <div class="head-form">
+                                    <h4>ОФОРМИТЬ ПОДПИСКУ</h4>
+                                </div>
+                                <div class="row">
+                                    <input class="name" type="email" name="email" value="" placeholder="Ваш email">
+                                </div>
+                                <div class="row row-submit">
+                                    <button class="btn submit ta" type="submit">Подписаться! <span
+                                                class="arrow">arrow</span></button>
+                                </div>
+                            </form>
+
+                            <script type="text/javascript">
+                                jQuery(function ($) {
+                                    $('#switch').click(function () {
+
+                                        $('#switch').hide();
+                                        $('#switch2').show();
+                                        $('input[name="skype"]').css('background-image', 'url(http://klever.today/public/phone.png)');
+                                        $('input[name="skype"]').mask("+" + telCode + " (999) 999-9999");
+                                        $('input[name="skype"]').attr("placeholder", "МОЙ НОМЕР ТЕЛЕФОНА").placeholder();
+
+
+                                    });
+
+                                    $('#switch2').click(function () {
+
+                                        $('#switch2').hide();
+                                        $('#switch').show();
+
+                                        $('input[name="skype"]').replaceWith('<input class="text name" type="text" name="skype" value="" placeholder="МОЙ ЛОГИН SKYPE"/>');
+                                        $('input[name="skype"]').css('background-image', 'url(http://klever.today/public/skype.png)');
+                                        //$('input[name="skype"]').unmask();
+                                        $('input[name="skype"]').attr("placeholder", "МОЙ ЛОГИН SKYPE").placeholder();
+
+                                    });
+                                });
+                            </script>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </header>
 
     <div id="content" class="site-content">
 
-    <!--<div id="mws-sidebar-stitch"></div>-->
-    <div id="mws-sidebar-bg"></div>
-    <div id="mws-sidebar" class="klever-left-menu widget-area">
-        <?php dynamic_sidebar('klever-left-menu'); ?>
-    </div>
+        <!--<div id="mws-sidebar-stitch"></div>-->
+        <div id="mws-sidebar-bg"></div>
+        <div id="mws-sidebar" class="klever-left-menu widget-area">
+            <?php dynamic_sidebar('klever-left-menu'); ?>
+        </div>
 
 

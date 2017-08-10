@@ -290,7 +290,12 @@ ul.step-taber__head__list {
 
 .klever-panel-last {
     height: 200px;
-    margin-left: 1000px;
+    /*margin-left: 1000px;*/
+    /*line-height: 200px;*/
+    padding: 10px;
+    /*width: 250px;*/
+    float: right;
+    overflow: hidden;
     /*width: 100%;*/
     /*background-color: green !important;*/
     /*float: left;*/
@@ -425,8 +430,9 @@ body,
 .entry-content-wrapper,
 .comments-area,
 #main .not-found,
-#main .page-header/*,
-#main .status-publish*/ {
+#main .page-header /*,
+#main .status-publish*/
+{
     padding: 0 1em;
 }
 
@@ -507,8 +513,9 @@ h2.entry-title a {
     /* the next props are meant to keep this block independent from the other floated one */
     width: auto;
     overflow: hidden;
-}​​
+}
 
+​​
 .entry-content-excerpt p {
     margin-bottom: 0;
 }
@@ -542,4 +549,50 @@ h2.entry-title a {
 
 .entry-content-excerpt .more-link {
     display: none;
+}
+
+/* Форма подписки */
+.registration-form {
+    width: 300px;
+    float: right;
+    color: white;
+    padding: 10px 20px 14px;
+    /*background-color: #888;*/
+    border: 1px inset gray;
+    height: 100%;
+}
+
+.registration-form .submit {
+    width: 100%;
+    margin-top: 10px;
+    height: 43px;
+}
+
+.registration-form input {
+    height: 43px;
+    background-color: rgb(237, 237, 237);
+    box-shadow: 0px 0px 1px rgb(35, 92, 119);
+    color: rgb(102, 102, 102);
+    padding-left: 57px;
+}
+
+.registration-form .arrow {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 53px;
+    height: 52px;
+    background: transparent url(../img/bg-btn.png) no-repeat scroll 0% 0%;
+    z-index: 10;
+    font-size: 0px;
+    line-height: 0;
+    box-sizing: border-box;
+}
+
+.registration-form form {
+    margin-top: 10px;
+}
+
+.registration-form .head-form {
+    margin-bottom: 10px;
 }
