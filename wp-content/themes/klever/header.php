@@ -152,10 +152,12 @@ ini_set('display_errors', 1);
         </div>
     </header>
 
+    <div id="content" class="site-content">
+
     <!--<div id="mws-sidebar-stitch"></div>-->
     <div id="mws-sidebar-bg"></div>
     <div id="mws-sidebar" class="klever-left-menu widget-area">
         <?php dynamic_sidebar('klever-left-menu'); ?>
     </div>
 
-    <div id="content" class="site-content">
+

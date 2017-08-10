@@ -336,7 +336,7 @@ ul.step-taber__head__list {
 }
 
 #content {
-    margin: 20px 20px 20px 220px;
+    margin: 20px 20px 20px 0;
     padding: 0;
 }
 
@@ -388,7 +388,9 @@ body:after {
 }
 
 #mws-sidebar {
-    position: absolute;
+    position: relative;
+    top: -20px;
+    margin-right: 1em;
 }
 
 body,
@@ -518,7 +520,7 @@ h2.entry-title a {
 /* flexible content */
 #content {
     height: auto;
-    overflow: hidden;
+    overflow: visible;
 }
 
 #primary {
