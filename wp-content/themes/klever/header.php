@@ -217,7 +217,7 @@ ini_set('display_errors', 1);
                                                 if (data && data.status) {
                                                     if (data.status == 'success') {
                                                         alert("Вы успешно подписаны!");
-                                                        $.trim($(this).find('.reg_email').val('');
+                                                        $('.registration-form-form .reg_email').val('');
                                                     } else {
                                                         alert(data.msg);
                                                     }
