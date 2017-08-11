@@ -71,6 +71,15 @@ function klever_widgets_init()
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
+    register_sidebar(array(
+        'name' => __('Подпись к подписке', 'klever'),
+        'id' => 'klever-subscribe-caption',
+        'description' => __('Подпись к подписке.', 'klever'),
+        'before_widget' => '<h4 class="%2$s">',
+        'after_widget' => '</h4>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
 }
 
 add_action('widgets_init', 'klever_widgets_init');

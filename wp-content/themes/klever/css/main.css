@@ -556,10 +556,19 @@ h2.entry-title a {
     width: 300px;
     float: right;
     color: white;
-    padding: 10px 20px 14px;
+    padding: 10px 20px;
     /*background-color: #888;*/
     border: 1px inset gray;
     height: 100%;
+    position: relative;
+}
+
+.registration-form-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 260px;
 }
 
 .registration-form .submit {
@@ -567,7 +576,7 @@ h2.entry-title a {
     position: relative;
     margin-top: 10px;
     height: 43px;
-    /*background: transparent linear-gradient(to bottom, rgb(139, 206, 0) 0%, rgb(135, 204, 0) 20%, rgb(107, 190, 0) 96%, rgb(92, 157, 0) 98%, rgb(92, 157, 0) 100%) repeat scroll 0% 0%;*/
+    padding-right: 55px;
     background: transparent linear-gradient(to bottom, rgb(139, 139, 139) 0%, rgb(135, 135, 135) 20%, rgb(107, 107, 107) 96%, rgb(92, 92, 92) 98%, rgb(92, 92, 92) 100%) repeat scroll 0% 0%;
 }
 
@@ -579,10 +588,15 @@ h2.entry-title a {
     padding-left: 57px;
 }
 
-.registration-form form {
+/*.registration-form form {
     margin-top: 10px;
-}
+}*/
 
 .registration-form .head-form {
     margin-bottom: 10px;
+}
+
+.registration-form .head-form p {
+    padding: 0;
+    margin: 0;
 }

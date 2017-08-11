@@ -170,15 +170,16 @@ ini_set('display_errors', 1);
                     <div class="klever-panel-last">
                         <div class="registration-form">
                             <form method="post" class="registration-form-form">
-                                <div class="head-form">
-                                    <h4>ОФОРМИТЬ ПОДПИСКУ</h4>
+                                <div class="head-form widget-area">
+                                    <!--<h4>ОФОРМИТЬ ПОДПИСКУ</h4>-->
+                                    <?php dynamic_sidebar('klever-subscribe-caption'); ?>
                                 </div>
                                 <div class="row">
                                     <input class="reg_email" type="email" name="email" value="" placeholder="Ваш email" required="required">
                                 </div>
                                 <div class="row row-submit">
                                     <button class="btn submit" type="submit">Подписаться!
-                                        <a class="arrow">arrow</a>
+                                        <span class="arrow">arrow</span>
                                     </button>
                                 </div>
                             </form>
