@@ -63,10 +63,23 @@ ini_set('display_errors', 1);
     <link href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/main.css" rel="stylesheet">
 
     <style type="text/css">
-        .registration-form input.name {
+        .registration-form input.reg_email {
             background-position: 4% 50%;
             background-repeat: no-repeat;
             background-image: url(<?php bloginfo('stylesheet_directory') ?>/img/envelope.png);
+        }
+
+        .registration-form .arrow {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 44px;
+            height: 43px;
+            background: transparent url(<?php bloginfo('stylesheet_directory') ?>/img/bg-btn.png) no-repeat scroll 0% 0%;
+            z-index: 10;
+            font-size: 0px;
+            line-height: 0;
+            box-sizing: border-box;
         }
     </style>
 
@@ -161,15 +174,68 @@ ini_set('display_errors', 1);
                                     <h4>ОФОРМИТЬ ПОДПИСКУ</h4>
                                 </div>
                                 <div class="row">
-                                    <input class="name" type="email" name="email" value="" placeholder="Ваш email">
+                                    <input class="reg_email" type="email" name="email" value="" placeholder="Ваш email" required="required">
                                 </div>
                                 <div class="row row-submit">
-                                    <button class="btn submit ta" type="submit">Подписаться! <span
-                                                class="arrow">arrow</span></button>
+                                    <button class="btn submit" type="submit">Подписаться!
+                                        <a class="arrow">arrow</a>
+                                    </button>
                                 </div>
                             </form>
 
-                            <script type="text/javascript">
+                            <script>
+                                jQuery(function ($) {
+                                    $('.registration-form .submit').hover(function () {
+                                        $(".registration-form .arrow").css('background', 'url(<?php bloginfo('stylesheet_directory') ?>/img/bg-btn.png) no-repeat scroll 0% 100%');
+                                    });
+                                    $('.registration-form .submit').mouseout(function () {
+                                        $(".registration-form .arrow").css('background', 'url(<?php bloginfo('stylesheet_directory') ?>/img/bg-btn.png) no-repeat scroll 0% 0%');
+                                    });
+
+                                    function validateEmail(email) {
+                                        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                                        return re.test(email);
+                                    }
+
+                                    $(".registration-form-form").submit(function (e) {
+                                        e.preventDefault();
+                                        var email = $.trim($(this).find('.reg_email').val());
+                                        $(this).find('.reg_email').val(email);
+                                        if (!email) {
+                                            alert('Пожалуйста введите значение email');
+                                            return false;
+                                        }
+
+                                        if (!validateEmail(email)) {
+                                            alert('Пожалуйста введите правильное значение email');
+                                            return false;
+                                        }
+
+                                        $.post('<?php bloginfo('stylesheet_directory') ?>/ajax.php',
+                                            {email: email},
+                                            function (data) {
+                                                if (data && data.status) {
+                                                    if (data.status == 'success') {
+                                                        alert("Вы успешно подписаны!");
+                                                        $.trim($(this).find('.reg_email').val('');
+                                                    } else {
+                                                        alert(data.msg);
+                                                    }
+                                                } else {
+                                                    alert("Произошла ошибка! Пожалуйста, повторите попытку позже.");
+                                                }
+                                            }
+                                        ).fail(function () {
+                                            alert("Произошла ошибка! Пожалуйста, повторите попытку позже.");
+                                        });
+
+                                        return false;
+                                    });
+
+                                });
+                            </script>
+
+                            <!--<script type="text/javascript">
                                 jQuery(function ($) {
                                     $('#switch').click(function () {
 
@@ -194,7 +260,7 @@ ini_set('display_errors', 1);
 
                                     });
                                 });
-                            </script>
+                            </script>-->
 
                         </div>
                     </div>
