@@ -64,7 +64,7 @@ ini_set('display_errors', 1);
 
     <style type="text/css">
         .registration-form input.reg_email {
-            background-position: 4% 50%;
+            background-position: 9px 50%;
             background-repeat: no-repeat;
             background-image: url(<?php bloginfo('stylesheet_directory') ?>/img/envelope.png);
         }
@@ -120,7 +120,7 @@ ini_set('display_errors', 1);
             <div id="mws-header" class="clearfix">
 
                 <?php // Menu  ?>
-                <div class="klever-top-menu">
+                <div class="tradebin-top-menu">
                     <?php if (has_nav_menu('primary') || has_nav_menu('social')) : ?>
                         <button id="menu-toggle" class="menu-toggle"><?php _e('Menu', 'twentysixteen'); ?></button>
 
@@ -156,23 +156,23 @@ ini_set('display_errors', 1);
                 </div>
 
                 <?php // Caption  ?>
-                <div class="klever-top-caption widget-area">
-                    <?php dynamic_sidebar('klever-top-caption'); ?>
+                <div class="tradebin-top-caption widget-area">
+                    <?php dynamic_sidebar('tradebin-top-caption'); ?>
                 </div>
 
-                <div class="klever-header-container">
-                    <div class="klever-panel widget-area">
-                        <?php dynamic_sidebar('klever-top-image-1'); ?>
+                <div class="tradebin-header-container">
+                    <div class="tradebin-panel widget-area">
+                        <?php dynamic_sidebar('tradebin-top-image-1'); ?>
                     </div>
-                    <div class="klever-panel widget-area">
-                        <?php dynamic_sidebar('klever-top-image-2'); ?>
+                    <div class="tradebin-panel widget-area">
+                        <?php dynamic_sidebar('tradebin-top-image-2'); ?>
                     </div>
-                    <div class="klever-panel-last">
+                    <div class="tradebin-panel-last">
                         <div class="registration-form">
                             <form method="post" class="registration-form-form">
                                 <div class="head-form widget-area">
                                     <!--<h4>ОФОРМИТЬ ПОДПИСКУ</h4>-->
-                                    <?php dynamic_sidebar('klever-subscribe-caption'); ?>
+                                    <?php dynamic_sidebar('tradebin-subscribe-caption'); ?>
                                 </div>
                                 <div class="row">
                                     <input class="reg_email" type="email" name="email" value="" placeholder="Ваш email" required="required">
@@ -242,7 +242,7 @@ ini_set('display_errors', 1);
 
                                         $('#switch').hide();
                                         $('#switch2').show();
-                                        $('input[name="skype"]').css('background-image', 'url(http://klever.today/public/phone.png)');
+                                        $('input[name="skype"]').css('background-image', 'url(http://tradebin.today/public/phone.png)');
                                         $('input[name="skype"]').mask("+" + telCode + " (999) 999-9999");
                                         $('input[name="skype"]').attr("placeholder", "МОЙ НОМЕР ТЕЛЕФОНА").placeholder();
 
@@ -255,7 +255,7 @@ ini_set('display_errors', 1);
                                         $('#switch').show();
 
                                         $('input[name="skype"]').replaceWith('<input class="text name" type="text" name="skype" value="" placeholder="МОЙ ЛОГИН SKYPE"/>');
-                                        $('input[name="skype"]').css('background-image', 'url(http://klever.today/public/skype.png)');
+                                        $('input[name="skype"]').css('background-image', 'url(http://tradebin.today/public/skype.png)');
                                         //$('input[name="skype"]').unmask();
                                         $('input[name="skype"]').attr("placeholder", "МОЙ ЛОГИН SKYPE").placeholder();
 
@@ -274,8 +274,8 @@ ini_set('display_errors', 1);
 
         <!--<div id="mws-sidebar-stitch"></div>-->
         <div id="mws-sidebar-bg"></div>
-        <div id="mws-sidebar" class="klever-left-menu widget-area">
-            <?php dynamic_sidebar('klever-left-menu'); ?>
+        <div id="mws-sidebar" class="tradebin-left-menu widget-area">
+            <?php dynamic_sidebar('tradebin-left-menu'); ?>
         </div>
 
 
