@@ -175,7 +175,8 @@ ini_set('display_errors', 1);
                                     <?php dynamic_sidebar('tradebin-subscribe-caption'); ?>
                                 </div>
                                 <div class="row">
-                                    <input class="reg_email" type="email" name="email" value="" placeholder="Ваш email" required="required">
+                                    <input class="reg_email" type="email" name="email" value="" placeholder="Ваш email"
+                                           required="required">
                                 </div>
                                 <div class="row row-submit">
                                     <button class="btn submit" type="submit">Подписаться!
@@ -235,37 +236,19 @@ ini_set('display_errors', 1);
 
                                 });
                             </script>
-
-                            <!--<script type="text/javascript">
-                                jQuery(function ($) {
-                                    $('#switch').click(function () {
-
-                                        $('#switch').hide();
-                                        $('#switch2').show();
-                                        $('input[name="skype"]').css('background-image', 'url(http://tradebin.today/public/phone.png)');
-                                        $('input[name="skype"]').mask("+" + telCode + " (999) 999-9999");
-                                        $('input[name="skype"]').attr("placeholder", "МОЙ НОМЕР ТЕЛЕФОНА").placeholder();
-
-
-                                    });
-
-                                    $('#switch2').click(function () {
-
-                                        $('#switch2').hide();
-                                        $('#switch').show();
-
-                                        $('input[name="skype"]').replaceWith('<input class="text name" type="text" name="skype" value="" placeholder="МОЙ ЛОГИН SKYPE"/>');
-                                        $('input[name="skype"]').css('background-image', 'url(http://tradebin.today/public/skype.png)');
-                                        //$('input[name="skype"]').unmask();
-                                        $('input[name="skype"]').attr("placeholder", "МОЙ ЛОГИН SKYPE").placeholder();
-
-                                    });
-                                });
-                            </script>-->
-
                         </div>
                     </div>
                 </div>
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="true" aria-controls="navbar" title="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
             </div>
         </div>
     </header>
