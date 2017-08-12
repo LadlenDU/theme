@@ -249,16 +249,33 @@ ini_set('display_errors', 1);
                     </button>
                 </div>
 
+                <script>
+                    jQuery(function ($) {
+                        $(".navbar-header .navbar-toggle").click(function () {
+                            $(".left-sidebar").fadeToggle();
+                            //$(".left-sidebar").toggleClass('hidden');
+                            /*$(".left-sidebar").toggle(function () {
+                                    $(this).animate({width: 0});
+                                },
+                                function () {
+                                    $(this).animate({width: 200});
+                                });*/
+                        });
+                    });
+                </script>
+
             </div>
         </div>
     </header>
 
     <div id="content" class="site-content">
 
-        <!--<div id="mws-sidebar-stitch"></div>-->
-        <div id="mws-sidebar-bg"></div>
-        <div id="mws-sidebar" class="tradebin-left-menu widget-area">
-            <?php dynamic_sidebar('tradebin-left-menu'); ?>
+        <div class="left-sidebar">
+            <!--<div id="mws-sidebar-stitch"></div>-->
+            <div id="mws-sidebar-bg"></div>
+            <div id="mws-sidebar" class="tradebin-left-menu widget-area">
+                <?php dynamic_sidebar('tradebin-left-menu'); ?>
+            </div>
         </div>
 
 
