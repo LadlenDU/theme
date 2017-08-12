@@ -117,10 +117,10 @@ ini_set('display_errors', 1);
     <header id="masthead" class="site-header" role="banner">
         <div class="site-header-main">
 
-            <div id="mws-header" class="clearfix">
+            <div id="mws-header" class="clearfix"><!--
 
                 <?php // Menu  ?>
-                <div class="tradebin-top-menu">
+                --><div class="tradebin-top-menu">
                     <?php if (has_nav_menu('primary') || has_nav_menu('social')) : ?>
                         <button id="menu-toggle" class="menu-toggle"><?php _e('Menu', 'twentysixteen'); ?></button>
 
@@ -153,21 +153,21 @@ ini_set('display_errors', 1);
                             <?php endif; ?>
                         </div><!-- .site-header-menu -->
                     <?php endif; ?>
-                </div>
+                </div><!--
 
                 <?php // Caption  ?>
-                <div class="tradebin-top-caption widget-area">
+                --><div class="tradebin-top-caption widget-area">
                     <?php dynamic_sidebar('tradebin-top-caption'); ?>
-                </div>
+                </div><!--
 
-                <div class="tradebin-header-container">
-                    <div class="tradebin-panel widget-area">
+                --><div class="tradebin-header-container"><!--
+                    --><div class="tradebin-panel widget-area">
                         <?php dynamic_sidebar('tradebin-top-image-1'); ?>
-                    </div>
-                    <div class="tradebin-panel widget-area">
+                    </div><!--
+                    --><div class="tradebin-panel widget-area">
                         <?php dynamic_sidebar('tradebin-top-image-2'); ?>
-                    </div>
-                    <div class="tradebin-panel-last">
+                    </div><!--
+                    --><div class="tradebin-panel-last">
                         <div class="registration-form">
                             <form method="post" class="registration-form-form">
                                 <div class="head-form widget-area">
@@ -237,19 +237,17 @@ ini_set('display_errors', 1);
                                 });
                             </script>
                         </div>
-                    </div>
-                </div>
-
-                <div class="navbar-header">
+                    </div><!--
+                --></div><div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar"
                             aria-expanded="true" aria-controls="navbar" title="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                </div>
+                </div><!--
 
-                <script>
+                --><script>
                     jQuery(function ($) {
                         $(".navbar-header .navbar-toggle").click(function () {
                             $(".left-sidebar").fadeToggle();
@@ -262,9 +260,9 @@ ini_set('display_errors', 1);
                                 });*/
                         });
                     });
-                </script>
+                </script><!--
 
-            </div>
+            --></div>
         </div>
     </header>
 
