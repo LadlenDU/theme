@@ -402,6 +402,7 @@ body:after {
 body,
 .site {
     background-color: #F0F0F0;
+    min-width: auto;
 }
 
 #main {
@@ -737,7 +738,12 @@ h2.entry-title a {
         display: none;
     }
 
-    #content {
+    #content,
+    #mws-sidebar {
         margin-right: 0;
+    }
+
+    .tradebin-panel {
+        margin-left: 0;
     }
 }
