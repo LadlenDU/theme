@@ -342,7 +342,8 @@ ul.step-taber__head__list {
     position: absolute;
     right: -2px;
     top: 0;
-    height: 34px;
+    /*height: 34px;*/
+    height: 100%;
     width: 1px;
 }
 

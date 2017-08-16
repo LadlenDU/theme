@@ -22,45 +22,33 @@ ini_set('display_errors', 1);
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <!--<link rel="shortcut icon" href="<?php /*echo esc_url( get_stylesheet_directory_uri() ); */ ?>/favicon.ico" type="image/x-icon">-->
-    <!--<link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="pingback" href="<?php /*bloginfo( 'pingback_url' ); */ ?>">-->
-
-    <!--<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>-->
 
     <!--[if lt IE 9]>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
     <![endif]-->
-
-    <!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
 
     <?php wp_head(); ?>
 
     <!-- Required Stylesheets -->
     <link rel="stylesheet" type="text/css"
           href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/style.css"
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/style.css?ver=1.1"
           media="screen">
 
     <link rel="stylesheet" type="text/css"
-          href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/mws-style.min.css">
+          href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/mws-style.min.css?ver=1.1">
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/icol16.css">
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/icol32.css">
 
     <!-- Demo Stylesheet -->
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/demo.css">
 
-    <!-- jQuery-UI Stylesheet -->
-    <!--<link rel="stylesheet" type="text/css" href="<?php /*echo esc_url( get_stylesheet_directory_uri() ); */ ?>/css/jquery.ui.all.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="<?php /*echo esc_url( get_stylesheet_directory_uri() ); */ ?>/css/jquery-ui.custom.css" media="screen">-->
-
     <!-- Theme Stylesheet -->
     <link rel="stylesheet" type="text/css"
-          href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/mws-theme.css">
+          href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/mws-theme.css?ver=1.1">
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/themer.css">
 
-    <link href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/main.css" rel="stylesheet">
+    <link href="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/main.css?ver=1.1" rel="stylesheet">
 
     <style type="text/css">
         .registration-form input.reg_email {
@@ -87,33 +75,6 @@ ini_set('display_errors', 1);
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-    <!--<a class="skip-link screen-reader-text" href="#content"><?php /*_e( 'Skip to content', 'twentysixteen' ); */ ?></a>
-
-    <div id="sidebar" class="sidebar">
-        <header id="masthead" class="site-header" role="banner">
-            <div class="site-branding">
-                <?php
-    /*                twentysixteen_the_custom_logo();
-
-                    if ( is_front_page() && is_home() ) : */ ?>
-                    <h1 class="site-title"><a href="<?php /*echo esc_url( home_url( '/' ) ); */ ?>" rel="home"><?php /*bloginfo( 'name' ); */ ?></a></h1>
-                <?php /*else : */ ?>
-                    <p class="site-title"><a href="<?php /*echo esc_url( home_url( '/' ) ); */ ?>" rel="home"><?php /*bloginfo( 'name' ); */ ?></a></p>
-                <?php /*endif;
-
-                $description = get_bloginfo( 'description', 'display' );
-                if ( $description || is_customize_preview() ) : */ ?>
-                    <p class="site-description"><?php /*echo $description; */ ?></p>
-                <?php /*endif;
-                */ ?>
-                <button class="secondary-toggle"><?php /*_e( 'Menu and widgets', 'twentysixteen' ); */ ?></button>
-            </div>
-        </header>
-
-        <?php /*get_sidebar(); */ ?>
-    </div>--><!-- .sidebar -->
-
-
     <header id="masthead" class="site-header" role="banner">
         <div class="site-header-main">
 
