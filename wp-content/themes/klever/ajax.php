@@ -1,10 +1,35 @@
 <?php
 
-//error_reporting(E_ALL);
-//ini_set('display_errors', TRUE);
-//ini_set('display_startup_errors', TRUE);
+error_reporting(E_ALL);
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
+
+#define('ABSPATH', __DIR__ . '/../../../');
+
+/** Load WordPress Bootstrap */
+require_once(dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php');
+
+require_once (__DIR__ . '/../../plugins/mailpoet/mailpoet.php');
+
+#use MailPoet\API\JSON\v1\Segments;
+use MailPoet\Models\Segment;
+
+$ret = Segment::createOrUpdate(['name' => 'TB']);
+//print_r($ret);
+
+//$tt = $ret->orm->select('*')->findArray();
+$tt = $ret->orm->select('id')->where(['name' => 'TB2'])->findArray();
+print_r($tt);
+
+//echo "\n\n\nID: " . $ret->created_at . "\n\n";
+
+exit;
 
 require_once(__DIR__ . '/lib/PHPExcel-1.8/PHPExcel.php');
+
+if (!empty($_POST['sync'])) {
+
+}
 
 if (!empty($_POST['email'])) {
     $email = trim($_POST['email']);
