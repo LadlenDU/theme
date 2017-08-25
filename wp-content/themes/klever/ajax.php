@@ -1,5 +1,8 @@
 <?php
 
+use MailPoet\Models\Segment;
+use MailPoet\Models\Subscriber;
+
 error_reporting(E_ALL);
 ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
@@ -13,16 +16,19 @@ require_once(dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php');
 require_once(__DIR__ . '/../../plugins/mailpoet/mailpoet.php');
 require_once(__DIR__ . '/lib/PHPExcel-1.8/PHPExcel.php');
 
-use MailPoet\Models\Segment;
+$subscriberListId = null;
+
+function getSubscriberListId() {
+    $sl = Segment::createOrUpdate(['name' => SUBSCRIBERS_LIST]);
+    $idArr = $sl->orm->select('id')->where(['name' => SUBSCRIBERS_LIST])->findArray();
+    return $idArr[0]['id'];
+}
 
 /**
  * Начальная синхронизация.
  */
 if (!empty($_GET['sync'])) {
-    $sl = Segment::createOrUpdate(['name' => SUBSCRIBERS_LIST]);
-    $idArr = $sl->orm->select('id')->where(['name' => SUBSCRIBERS_LIST])->findArray();
-    //print_r($tt);
-    //$idArr[0]['id']
+    $subscriberListId = getSubscriberListId();
 
     if (file_exists(SUBSCRIBERS_FILE)) {
         $objPHPExcel = new PHPExcel();
@@ -38,12 +44,12 @@ if (!empty($_GET['sync'])) {
             }
         }
 
-        // Подготавливаем данные для ввода в БД
+        // Подготавливаем данные для ввода в БД mailpoet
         $data['columns']['email']['index'] = 0;
         $data['columns']['email']['validation_rule'] = false;
         $data['subscribers'] = $emailList;
         $data['timestamp'] = time() . '.809';
-        $data['segments'] = [$idArr[0]['id']];
+        $data['segments'] = [$subscriberListId];
         $data['updateSubscribers'] = true;
 
         try {
@@ -93,6 +99,22 @@ if (!empty($_POST['email'])) {
 
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
     $objWriter->save(SUBSCRIBERS_FILE);
+
+    // Размещение в БД mailpoet
+    if (!$subscriberListId) {
+        $subscriberListId = getSubscriberListId();
+    }
+    $data['action'] = 'mailpoet';
+    $data['api_version'] = 'v1';
+    $data['endpoint'] = 'subscribers';
+    $data['method'] = 'save';
+    $data['data']['email'] = $email;
+    $data['data']['first_name'] = '';
+    $data['data']['last_name'] = '';
+    $data['data']['status'] = 'subscribed';
+    $data['data']['segments'][] = $subscriberListId;
+    $subscriber = Subscriber::createOrUpdate($data);
+    $errors = $subscriber->getErrors();
 
     $ret = ['status' => 'success'];
     header('Content-Type: application/json');
