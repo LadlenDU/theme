@@ -4,45 +4,75 @@ error_reporting(E_ALL);
 ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
 
-#define('ABSPATH', __DIR__ . '/../../../');
+/** Название списка подписчиков */
+define('SUBSCRIBERS_LIST', 'TB');
+define('SUBSCRIBERS_FILE', __DIR__ . '/../../../subscribed_users.xls');
 
 /** Load WordPress Bootstrap */
 require_once(dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php');
-
-require_once (__DIR__ . '/../../plugins/mailpoet/mailpoet.php');
-
-#use MailPoet\API\JSON\v1\Segments;
-use MailPoet\Models\Segment;
-
-$ret = Segment::createOrUpdate(['name' => 'TB']);
-//print_r($ret);
-
-//$tt = $ret->orm->select('*')->findArray();
-$tt = $ret->orm->select('id')->where(['name' => 'TB2'])->findArray();
-print_r($tt);
-
-//echo "\n\n\nID: " . $ret->created_at . "\n\n";
-
-exit;
-
+require_once(__DIR__ . '/../../plugins/mailpoet/mailpoet.php');
 require_once(__DIR__ . '/lib/PHPExcel-1.8/PHPExcel.php');
 
-if (!empty($_POST['sync'])) {
+use MailPoet\Models\Segment;
 
+/**
+ * Начальная синхронизация.
+ */
+if (!empty($_GET['sync'])) {
+    $sl = Segment::createOrUpdate(['name' => SUBSCRIBERS_LIST]);
+    $idArr = $sl->orm->select('id')->where(['name' => SUBSCRIBERS_LIST])->findArray();
+    //print_r($tt);
+    //$idArr[0]['id']
+
+    if (file_exists(SUBSCRIBERS_FILE)) {
+        $objPHPExcel = new PHPExcel();
+        $objPHPExcel = PHPExcel_IOFactory::load(SUBSCRIBERS_FILE);
+        $objWorksheet = $objPHPExcel->setActiveSheetIndex(0);
+
+        // Берем все email из файла
+        $emailList = [];
+        $num_rows = $objWorksheet->getHighestRow();
+        for ($row = 1; $row <= $num_rows; ++$row) {
+            if ($email = $objWorksheet->getCellByColumnAndRow(1, $row)->getValue()) {
+                $emailList[] = [$email];
+            }
+        }
+
+        // Подготавливаем данные для ввода в БД
+        $data['columns']['email']['index'] = 0;
+        $data['columns']['email']['validation_rule'] = false;
+        $data['subscribers'] = $emailList;
+        $data['timestamp'] = time() . '.809';
+        $data['segments'] = [$idArr[0]['id']];
+        $data['updateSubscribers'] = true;
+
+        try {
+            $import = new \MailPoet\Subscribers\ImportExport\Import\Import(
+            //json_decode($data, true)
+                $data
+            );
+            $process = $import->process();
+            echo 'SUCCESS: ' . print_r($process, true);
+        } catch (\Exception $e) {
+            echo 'ERROR: ' . print_r((array(
+                    $e->getCode() => $e->getMessage()
+                )), true);
+        }
+    }
+
+    exit;
 }
 
 if (!empty($_POST['email'])) {
     $email = trim($_POST['email']);
 
-    $fName = __DIR__ . '/../../../subscribed_users.xls';
-
-    if (!file_exists($fName)) {
+    if (!file_exists(SUBSCRIBERS_FILE)) {
         $objPHPExcel = new PHPExcel();
         $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
-        $objWriter->save($fName);
+        $objWriter->save(SUBSCRIBERS_FILE);
     }
 
-    $objPHPExcel = PHPExcel_IOFactory::load($fName);
+    $objPHPExcel = PHPExcel_IOFactory::load(SUBSCRIBERS_FILE);
     $objWorksheet = $objPHPExcel->setActiveSheetIndex(0);
 
     // You can get the number of rows like so:
@@ -62,7 +92,7 @@ if (!empty($_POST['email'])) {
     $objWorksheet->setCellValueByColumnAndRow(1, $num_rows + 1, $email);
 
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
-    $objWriter->save($fName);
+    $objWriter->save(SUBSCRIBERS_FILE);
 
     $ret = ['status' => 'success'];
     header('Content-Type: application/json');
