@@ -30,6 +30,8 @@ function getSubscriberListId() {
 if (!empty($_GET['sync'])) {
     $subscriberListId = getSubscriberListId();
 
+    header('Content-Type: text/html; charset=utf-8');
+
     if (file_exists(SUBSCRIBERS_FILE)) {
         $objPHPExcel = new PHPExcel();
         $objPHPExcel = PHPExcel_IOFactory::load(SUBSCRIBERS_FILE);
@@ -40,7 +42,7 @@ if (!empty($_GET['sync'])) {
         $num_rows = $objWorksheet->getHighestRow();
         for ($row = 1; $row <= $num_rows; ++$row) {
             if ($email = $objWorksheet->getCellByColumnAndRow(1, $row)->getValue()) {
-                $emailList[] = [$email];
+                $emailList[] = [strtolower($email)];
             }
         }
 
@@ -48,13 +50,15 @@ if (!empty($_GET['sync'])) {
         $data['columns']['email']['index'] = 0;
         $data['columns']['email']['validation_rule'] = false;
         $data['subscribers'] = $emailList;
-        $data['timestamp'] = time() . '.809';
+        //$data['timestamp'] = time() . '.809';
+        $data['timestamp'] = microtime(true);
         $data['segments'] = [$subscriberListId];
         $data['updateSubscribers'] = true;
 
         try {
+            //$data = '{"columns":{"email":{"index":0,"validation_rule":false}},"subscribers":[["twilighttowerdu@gmail.com"]],"timestamp":1503761659.242,"segments":["2"],"updateSubscribers":true}';
             $import = new \MailPoet\Subscribers\ImportExport\Import\Import(
-            //json_decode($data, true)
+                //json_decode($data, true)
                 $data
             );
             $process = $import->process();
