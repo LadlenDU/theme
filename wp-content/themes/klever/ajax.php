@@ -104,15 +104,11 @@ if (!empty($_POST['email'])) {
     if (!$subscriberListId) {
         $subscriberListId = getSubscriberListId();
     }
-    $data['action'] = 'mailpoet';
-    $data['api_version'] = 'v1';
-    $data['endpoint'] = 'subscribers';
-    $data['method'] = 'save';
-    $data['data']['email'] = $email;
-    $data['data']['first_name'] = '';
-    $data['data']['last_name'] = '';
-    $data['data']['status'] = 'subscribed';
-    $data['data']['segments'][] = $subscriberListId;
+    $data['email'] = $email;
+    $data['first_name'] = '';
+    $data['last_name'] = '';
+    $data['status'] = 'subscribed';
+    $data['segments'][] = $subscriberListId;
     $subscriber = Subscriber::createOrUpdate($data);
     $errors = $subscriber->getErrors();
 
