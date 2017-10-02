@@ -2,8 +2,6 @@
 
 /** @var $atts array */
 
-//echo $atts['link'];
-
 $caption = empty($atts['caption']) ? 'ОФОРМИТЬ ПОДПИСКУ' : $atts['caption'];
 $subscribeCaption = empty($atts['subscribe_caption']) ? 'ПОДПИСАТЬСЯ!' : $atts['subscribe_caption'];
 
@@ -38,10 +36,11 @@ $subscribeCaption = empty($atts['subscribe_caption']) ? 'ПОДПИСАТЬСЯ!
                 return re.test(email);
             }
 
-            $(".registration-form-on-page .registration-form-form").submit(function (e) {
+            $(".registration-form-on-page .registration-form-form button.submit").click(function (e) {
                 e.preventDefault();
-                var email = $.trim($(this).find('.reg_email').val());
-                $(this).find('.reg_email').val(email);
+                var form = $(this).closest('form');
+                var email = $.trim(form.find('.reg_email').val());
+                form.find('.reg_email').val(email);
                 if (!email) {
                     alert('Пожалуйста введите значение email');
                     return false;
@@ -52,12 +51,16 @@ $subscribeCaption = empty($atts['subscribe_caption']) ? 'ПОДПИСАТЬСЯ!
                     return false;
                 }
 
+                window.open("<?php echo esc_html(get_home_url() . $atts['link']) ?>", '_blank');
+
                 $.post('<?php bloginfo('stylesheet_directory') ?>/ajax.php',
                     {email: email},
                     function (data) {
                         if (data && data.status) {
                             if (data.status == 'success') {
-                                alert("Вы успешно подписаны!");
+                                //alert("Вы успешно подписаны!");
+                                alert("Ссылка открылась в новом окне.");
+                                //window.open("<?php echo esc_html(get_home_url() . $atts['link']) ?>", '_blank');
                                 $('.registration-form-form .reg_email').val('');
                             } else {
                                 alert(data.msg);
