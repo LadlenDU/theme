@@ -59,7 +59,7 @@ $subscribeCaption = empty($atts['subscribe_caption']) ? 'ПОДПИСАТЬСЯ!
                         if (data && data.status) {
                             if (data.status == 'success') {
                                 //alert("Вы успешно подписаны!");
-                                alert("Ссылка открылась в новом окне.");
+                                alert("Ссылка открылась в новой вкладке.");
                                 //window.open("<?php echo esc_html(get_home_url() . $atts['link']) ?>", '_blank');
                                 $('.registration-form-form .reg_email').val('');
                             } else {
