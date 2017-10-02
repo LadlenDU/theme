@@ -4,18 +4,21 @@
 
 //echo $atts['link'];
 
+$caption = empty($atts['caption']) ? 'ОФОРМИТЬ ПОДПИСКУ' : $atts['caption'];
+$subscribeCaption = empty($atts['subscribe_caption']) ? 'ПОДПИСАТЬСЯ!' : $atts['subscribe_caption'];
+
 ?>
-<div class="registration-form">
-    <form method="post" class="registration-form-form">
-        <div class="head-form widget-area">
-            <?php dynamic_sidebar('tradebin-subscribe-caption'); ?>
+<div class="registration-form" style="width:100%">
+    <form method="post" class="registration-form-form" style="position:relative;top:0;left:0;transform:unset">
+        <div class="head-form widget-area" style="color:#3d3d3d">
+            <?php echo $caption ?>
         </div>
         <div class="row">
             <input class="reg_email" type="email" name="email" value="" placeholder="Ваш email"
                    required="required">
         </div>
         <div class="row row-submit">
-            <button class="btn submit" type="submit">Подписаться!
+            <button class="btn submit" type="submit"><?php echo $subscribeCaption ?>
                 <span class="arrow">arrow</span>
             </button>
         </div>
