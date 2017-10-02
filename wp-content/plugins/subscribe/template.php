@@ -8,7 +8,7 @@ $caption = empty($atts['caption']) ? 'ОФОРМИТЬ ПОДПИСКУ' : $atts
 $subscribeCaption = empty($atts['subscribe_caption']) ? 'ПОДПИСАТЬСЯ!' : $atts['subscribe_caption'];
 
 ?>
-<div class="registration-form" style="width:100%">
+<div class="registration-form registration-form-on-page" style="width:100%">
     <form method="post" class="registration-form-form" style="position:relative;top:0;left:0;transform:unset">
         <div class="head-form widget-area" style="color:#3d3d3d">
             <?php echo $caption ?>
@@ -26,11 +26,11 @@ $subscribeCaption = empty($atts['subscribe_caption']) ? 'ПОДПИСАТЬСЯ!
 
     <script>
         jQuery(function ($) {
-            $('.registration-form .submit').hover(function () {
-                $(".registration-form .arrow").css('background', 'url(<?php bloginfo('stylesheet_directory') ?>/img/bg-btn.png) no-repeat scroll 0% 100%');
+            $('.registration-form.registration-form-on-page .submit').hover(function () {
+                $(".registration-form.registration-form-on-page .arrow").css('background', 'url(<?php bloginfo('stylesheet_directory') ?>/img/bg-btn.png) no-repeat scroll 0% 100%');
             });
-            $('.registration-form .submit').mouseout(function () {
-                $(".registration-form .arrow").css('background', 'url(<?php bloginfo('stylesheet_directory') ?>/img/bg-btn.png) no-repeat scroll 0% 0%');
+            $('.registration-form.registration-form-on-page .submit').mouseout(function () {
+                $(".registration-form.registration-form-on-page .arrow").css('background', 'url(<?php bloginfo('stylesheet_directory') ?>/img/bg-btn.png) no-repeat scroll 0% 0%');
             });
 
             function validateEmail(email) {
