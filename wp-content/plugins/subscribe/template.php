@@ -38,7 +38,7 @@ $subscribeCaption = empty($atts['subscribe_caption']) ? 'ПОДПИСАТЬСЯ!
                 return re.test(email);
             }
 
-            $(".registration-form-form").submit(function (e) {
+            $(".registration-form-on-page .registration-form-form").submit(function (e) {
                 e.preventDefault();
                 var email = $.trim($(this).find('.reg_email').val());
                 $(this).find('.reg_email').val(email);

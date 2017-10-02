@@ -160,7 +160,7 @@ ini_set('display_errors', 1);
                                         return re.test(email);
                                     }
 
-                                    $(".registration-form-form").submit(function (e) {
+                                    $(".registration-form-in-theme .registration-form-form").submit(function (e) {
                                         e.preventDefault();
                                         var email = $.trim($(this).find('.reg_email').val());
                                         $(this).find('.reg_email').val(email);
