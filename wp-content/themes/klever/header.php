@@ -129,7 +129,7 @@ ini_set('display_errors', 1);
                         <?php dynamic_sidebar('tradebin-top-image-2'); ?>
                     </div><!--
                     --><div class="tradebin-panel-last">
-                        <div class="registration-form">
+                        <div class="registration-form registration-form-in-theme">
                             <form method="post" class="registration-form-form">
                                 <div class="head-form widget-area">
                                     <!--<h4>ОФОРМИТЬ ПОДПИСКУ</h4>-->
@@ -148,11 +148,11 @@ ini_set('display_errors', 1);
 
                             <script>
                                 jQuery(function ($) {
-                                    $('.registration-form .submit').hover(function () {
-                                        $(".registration-form .arrow").css('background', 'url(<?php bloginfo('stylesheet_directory') ?>/img/bg-btn.png) no-repeat scroll 0% 100%');
+                                    $('.registration-form.registration-form-in-theme .submit').hover(function () {
+                                        $(".registration-form.registration-form-in-theme .arrow").css('background', 'url(<?php bloginfo('stylesheet_directory') ?>/img/bg-btn.png) no-repeat scroll 0% 100%');
                                     });
-                                    $('.registration-form .submit').mouseout(function () {
-                                        $(".registration-form .arrow").css('background', 'url(<?php bloginfo('stylesheet_directory') ?>/img/bg-btn.png) no-repeat scroll 0% 0%');
+                                    $('.registration-form.registration-form-in-theme .submit').mouseout(function () {
+                                        $(".registration-form.registration-form-in-theme .arrow").css('background', 'url(<?php bloginfo('stylesheet_directory') ?>/img/bg-btn.png) no-repeat scroll 0% 0%');
                                     });
 
                                     function validateEmail(email) {
