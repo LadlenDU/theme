@@ -1,0 +1,75 @@
+<?php
+
+/** @var $atts array */
+
+//echo $atts['link'];
+
+?>
+<div class="registration-form">
+    <form method="post" class="registration-form-form">
+        <div class="head-form widget-area">
+            <?php dynamic_sidebar('tradebin-subscribe-caption'); ?>
+        </div>
+        <div class="row">
+            <input class="reg_email" type="email" name="email" value="" placeholder="Ваш email"
+                   required="required">
+        </div>
+        <div class="row row-submit">
+            <button class="btn submit" type="submit">Подписаться!
+                <span class="arrow">arrow</span>
+            </button>
+        </div>
+    </form>
+
+    <script>
+        jQuery(function ($) {
+            $('.registration-form .submit').hover(function () {
+                $(".registration-form .arrow").css('background', 'url(<?php bloginfo('stylesheet_directory') ?>/img/bg-btn.png) no-repeat scroll 0% 100%');
+            });
+            $('.registration-form .submit').mouseout(function () {
+                $(".registration-form .arrow").css('background', 'url(<?php bloginfo('stylesheet_directory') ?>/img/bg-btn.png) no-repeat scroll 0% 0%');
+            });
+
+            function validateEmail(email) {
+                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(email);
+            }
+
+            $(".registration-form-form").submit(function (e) {
+                e.preventDefault();
+                var email = $.trim($(this).find('.reg_email').val());
+                $(this).find('.reg_email').val(email);
+                if (!email) {
+                    alert('Пожалуйста введите значение email');
+                    return false;
+                }
+
+                if (!validateEmail(email)) {
+                    alert('Пожалуйста введите правильное значение email');
+                    return false;
+                }
+
+                $.post('<?php bloginfo('stylesheet_directory') ?>/ajax.php',
+                    {email: email},
+                    function (data) {
+                        if (data && data.status) {
+                            if (data.status == 'success') {
+                                alert("Вы успешно подписаны!");
+                                $('.registration-form-form .reg_email').val('');
+                            } else {
+                                alert(data.msg);
+                            }
+                        } else {
+                            alert("Произошла ошибка! Пожалуйста, повторите попытку позже.");
+                        }
+                    }
+                ).fail(function () {
+                    alert("Произошла ошибка! Пожалуйста, повторите попытку позже.");
+                });
+
+                return false;
+            });
+
+        });
+    </script>
+</div>

@@ -1,3 +1,7 @@
 .idea
 subscribed_users.xls
 /subscribed_users.xls
+
+./wp-content/plugins/mailpoet
+/wp-content/plugins/mailpoet
+wp-content/plugins/mailpoet
